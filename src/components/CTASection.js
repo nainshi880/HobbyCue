@@ -4,16 +4,14 @@ import GroupCharacters from "../assets/Group 99.svg";
 
 const CTASection = () => {
   return (
-    <Container
-      fluid
-      style={{ background: "#F7FDFF", marginTop: "55px" }}
-    >
+    <Container fluid style={{ background: "#F7FDFF", marginTop: "55px" }}>
       <div
         style={{
-          width: "1440px",
-          height: "662px",
+          width: "100%",
+          maxWidth: "1440px",
+          minHeight: "clamp(260px, 35vh, 520px)",
           margin: "0 auto",
-          padding: "60px 24px",
+          padding: "clamp(16px, 3vw, 48px) clamp(12px, 3vw, 24px)",
           display: "flex",
           flexDirection: "column"
         }}
@@ -22,7 +20,7 @@ const CTASection = () => {
         <div style={{ marginBottom: "24px" }}>
           <h2
             style={{
-              fontSize: "56px",
+              fontSize: "clamp(22px, 4vw, 56px)",
               lineHeight: 1.25,
               fontWeight: 500,
               color: "#1f2340",
@@ -35,13 +33,13 @@ const CTASection = () => {
 
           <button
             style={{
-              marginTop: "24px",
+              marginTop: "clamp(12px, 2vw, 24px)",
               background: "#6A389F",
               color: "#fff",
               border: "none",
               borderRadius: "10px",
-              padding: "12px 24px",
-              fontSize: "16px",
+              padding: "clamp(8px, 1.5vw, 12px) clamp(14px, 2vw, 24px)",
+              fontSize: "clamp(14px, 1.5vw, 16px)",
               fontWeight: 600,
               cursor: "pointer",
             }}
@@ -55,7 +53,12 @@ const CTASection = () => {
           <img
             src={GroupCharacters}
             alt="Characters"
-            style={{ width: "100%", height: "auto", maxHeight: "420px", objectFit: "contain" }}
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "clamp(110px, 22vh, 300px)",
+              objectFit: "contain"
+            }}
           />
         </div>
       </div>

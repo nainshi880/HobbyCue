@@ -9,15 +9,15 @@ const profileImage = require("../assets/Ellipse 12.png").default || require("../
 const Testimonials = () => {
   return (
     <>
-    <Container fluid className="testimonials-section" style={{ padding: "80px", background: "#fff" }}>
+    <Container fluid className="testimonials-section" style={{ padding: "clamp(24px,4vw,80px)", background: "#fff" }}>
       <div
         style={{
           background: "#F7F5F9",
           borderRadius: "12px",
-          padding: "48px",
+          padding: "clamp(16px,4vw,48px)",
           boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           border: "1px solid rgba(0,0,0,0.05)",
-          maxWidth: "1200px",
+          maxWidth: "560px",
           margin: "0 auto"
         }}
       >
@@ -47,7 +47,7 @@ const Testimonials = () => {
         {/* Testimonial Content */}
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "clamp(12px,2.8vw,16px)",
             lineHeight: "1.8",
             color: "#4A4A4A",
             marginBottom: "32px"
@@ -57,7 +57,7 @@ const Testimonials = () => {
         </p>
 
         {/* Bottom Section - Audio Player and User Profile */}
-        <div className="d-flex align-items-center justify-content-between" style={{ gap: "24px", flexWrap: "wrap" }}>
+        <div className="d-flex align-items-center justify-content-between" style={{ gap: "16px", flexWrap: "wrap" }}>
           {/* Audio Player */}
           <div
             style={{
@@ -66,16 +66,16 @@ const Testimonials = () => {
               padding: "16px 20px",
               display: "flex",
               alignItems: "center",
-              gap: "16px",
+              gap: "12px",
               flex: 1,
-              minWidth: "300px"
+              minWidth: "240px"
             }}
           >
             {/* Play Button */}
             <button
               style={{
-                width: "48px",
-                height: "48px",
+                width: "40px",
+                height: "40px",
                 borderRadius: "50%",
                 background: "#fff",
                 border: "none",
@@ -91,8 +91,8 @@ const Testimonials = () => {
                 src={playIcon} 
                 alt="Play" 
                 style={{ 
-                  width: "18px", 
-                  height: "18px",
+                  width: "16px", 
+                  height: "16px",
                   filter: "brightness(0) saturate(100%) invert(35%) sepia(93%) saturate(1352%) hue-rotate(249deg) brightness(95%) contrast(85%)"
                 }} 
               />
@@ -116,8 +116,8 @@ const Testimonials = () => {
                     left: 0,
                     top: "50%",
                     transform: "translateY(-50%)",
-                    width: "12px",
-                    height: "12px",
+                  width: "10px",
+                  height: "10px",
                     borderRadius: "50%",
                     background: "#6A389F",
                     cursor: "pointer"
@@ -127,9 +127,9 @@ const Testimonials = () => {
             </div>
 
             {/* Time Display */}
-            <span
+              <span
               style={{
-                fontSize: "14px",
+                fontSize: "12px",
                 color: "#8064A2",
                 fontWeight: 500,
                 flexShrink: 0
@@ -142,22 +142,22 @@ const Testimonials = () => {
             <div style={{ position: "relative", flexShrink: 0 }}>
               <div
                 style={{
-                  width: "64px",
-                  height: "64px",
+                  width: "48px",
+                  height: "48px",
                   borderRadius: "50%",
                   background: "#fff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: "0 0 0 4px #fff",
+                  boxShadow: "0 0 0 3px #fff",
                 }}
               >
                 <img 
                   src={profileImage} 
                   alt="Shubha Nagarajan" 
                   style={{ 
-                    width: "56px", 
-                    height: "56px",
+                    width: "42px", 
+                    height: "42px",
                     borderRadius: "50%",
                     objectFit: "cover"
                   }} 
@@ -170,8 +170,8 @@ const Testimonials = () => {
                   position: "absolute",
                   bottom: "-6px",
                   left: "-6px",
-                  width: "22px",
-                  height: "22px",
+                  width: "18px",
+                  height: "18px",
                   filter: "brightness(0) saturate(100%) invert(100%)",
                 }}
               />
@@ -179,14 +179,14 @@ const Testimonials = () => {
           </div>
 
           {/* User Profile */}
-          <div className="d-flex align-items-center" style={{ gap: "16px", flexShrink: 0 }}>
+          <div className="d-flex align-items-center" style={{ gap: "12px", flexShrink: 0 }}>
             {/* Left profile image */}
             <img 
               src={profileImage} 
               alt="Profile" 
               style={{ 
-                width: "64px", 
-                height: "64px",
+                width: "48px", 
+                height: "48px",
                 borderRadius: "50%",
                 objectFit: "cover"
               }} 
@@ -196,7 +196,7 @@ const Testimonials = () => {
             <div>
               <h3
                 style={{
-                  fontSize: "18px",
+                  fontSize: "16px",
                   fontWeight: "600",
                   color: "#6A389F",
                   margin: 0,
@@ -207,7 +207,7 @@ const Testimonials = () => {
               </h3>
               <p
                 style={{
-                  fontSize: "14px",
+                  fontSize: "12px",
                   color: "#5C6F9F",
                   margin: 0
                 }}

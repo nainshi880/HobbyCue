@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# HobbyCue Responsive Layout
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React implementation of the HobbyCue landing experience, built with React, React Bootstrap, and custom SVG assets. The project closely follows a Figma reference with precise spacing, icon sizing, and adaptive behavior for desktop and small devices (Android/iOS).
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- React (Create React App)
+- React Bootstrap (layout utilities only)
+- Plain CSS-in-JS (inline styles) for pixel-accurate overrides
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+2. Start the dev server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm start
+```
 
-### `npm run build`
+The app runs at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+responsive-layout/
+  public/
+    index.html         # HTML template, favicon set to logo.svg
+    manifest.json      # PWA icons (logo.svg)
+  src/
+    assets/            # SVG/PNG icons and illustrations
+    components/
+      Navbar.js        # Responsive navbar (24x24 icons, mobile hamburger)
+      HeroSection.js   # Intro with sign-in card and illustration
+      Features.js      # Feature cards (People/Place/Product/Program)
+      CTASection.js    # Responsive CTA banner with characters
+      Testimonials.js  # Desktop/mobile-optimized testimonial block
+      Footer.js        # Footer with circular social icons + invite form
+    index.js, index.css
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key UX Details Implemented
 
-### `npm run eject`
+- Consistent icon sizing (navbar icons 24x24).
+- Sign-in card tabs with active underline and muted inactive state.
+- Social auth buttons, password toggle, and outline/filled button states per design.
+- CTA section capped at maxWidth 1440 and responsive heights via `clamp`.
+- Testimonials:
+  - Desktop: wide audio tracker on the left; profile (avatar, name, role) on the right.
+  - Mobile: name/role shown above the audio tracker; elements scale via `clamp`.
+- Footer: 30px circular social icons with muted glyph color and joined invite input/button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Scripts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start` – Run dev server
+- `npm run build` – Production build
+- `npm test` – Run tests (CRA default)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Customization Tips
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Colors are centralized inline near their usage (e.g., `#8064A2` for purple). Search for the hex if you need to tweak the theme.
+- Most sizes use `clamp(min, vw, max)` to stay responsive; adjust min/max for tighter or looser scaling.
 
-## Learn More
+## Browser Support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Modern evergreen browsers (Chrome, Edge, Firefox, Safari). Mobile layouts tested on Android-scale widths.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This repository is for educational/demo purposes. Use assets according to their respective licenses.

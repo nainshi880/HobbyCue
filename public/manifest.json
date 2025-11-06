@@ -1,0 +1,15 @@
+{
+  "short_name": "HobbyCue",
+  "name": "HobbyCue - Your Hobby, Your Community",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6A389F",
+  "background_color": "#ffffff"
+}

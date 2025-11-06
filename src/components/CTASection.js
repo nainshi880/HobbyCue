@@ -13,7 +13,9 @@ const CTASection = () => {
           margin: "0 auto",
           padding: "clamp(16px, 3vw, 48px) clamp(12px, 3vw, 24px)",
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
+          boxSizing: "border-box",
+          overflow: "hidden"
         }}
       >
         {/* Heading and Button */}
@@ -49,7 +51,7 @@ const CTASection = () => {
         </div>
 
         {/* Characters Illustration */}
-        <div style={{ marginTop: "12px", flex: 1, display: "flex", alignItems: "flex-end" }}>
+        <div style={{ marginTop: "12px", flex: 1, display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
           <img
             src={GroupCharacters}
             alt="Characters"

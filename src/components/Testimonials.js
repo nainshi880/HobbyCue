@@ -17,7 +17,7 @@ const Testimonials = () => {
           padding: "clamp(16px,4vw,48px)",
           boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           border: "1px solid rgba(0,0,0,0.05)",
-          maxWidth: "560px",
+          maxWidth: "clamp(320px, 90vw, 1200px)",
           margin: "0 auto"
         }}
       >
@@ -27,14 +27,14 @@ const Testimonials = () => {
             src={vector} 
             alt="Quote" 
             style={{ 
-              width: "48px", 
-              height: "48px",
+              width: "40px", 
+              height: "40px",
               filter: "brightness(0) saturate(100%) invert(35%) sepia(93%) saturate(1352%) hue-rotate(249deg) brightness(95%) contrast(85%)"
             }} 
           />
           <h2 
             style={{ 
-              fontSize: "24px", 
+              fontSize: "28px", 
               fontWeight: "700", 
               color: "#6A389F",
               margin: 0
@@ -57,7 +57,23 @@ const Testimonials = () => {
         </p>
 
         {/* Bottom Section - Audio Player and User Profile */}
-        <div className="d-flex align-items-center justify-content-between" style={{ gap: "16px", flexWrap: "wrap" }}>
+        <div className="d-flex align-items-center justify-content-between flex-md-nowrap" style={{ gap: "clamp(12px, 2.5vw, 32px)", flexWrap: "wrap" }}>
+          {/* Mobile stacked profile above audio */}
+          <div className="d-flex d-md-none align-items-center mb-3" style={{ gap: "10px", width: "100%" }}>
+            <img 
+              src={profileImage} 
+              alt="Shubha Nagarajan" 
+              style={{ width: "clamp(36px, 7vw, 48px)", height: "clamp(36px, 7vw, 48px)", borderRadius: "50%", objectFit: "cover" }}
+            />
+            <div className="d-flex flex-column" style={{ minWidth: 0 }}>
+              <span style={{ fontSize: "clamp(12px, 2.8vw, 16px)", color: "#6A389F", fontWeight: 600, lineHeight: 1.2 }}>
+                Shubha Nagarajan
+              </span>
+              <span style={{ fontSize: "clamp(10px, 2.4vw, 13px)", color: "#5C6F9F", lineHeight: 1.2 }}>
+                Classical Dancer
+              </span>
+            </div>
+          </div>
           {/* Audio Player */}
           <div
             style={{
@@ -66,16 +82,16 @@ const Testimonials = () => {
               padding: "16px 20px",
               display: "flex",
               alignItems: "center",
-              gap: "12px",
-              flex: 1,
-              minWidth: "240px"
+              gap: "16px",
+              flex: "1 1 100%",
+              minWidth: "clamp(220px, 100%, 600px)"
             }}
           >
             {/* Play Button */}
             <button
               style={{
-                width: "40px",
-                height: "40px",
+                width: "clamp(24px, 5vw, 48px)",
+                height: "clamp(24px, 5vw, 48px)",
                 borderRadius: "50%",
                 background: "#fff",
                 border: "none",
@@ -91,8 +107,8 @@ const Testimonials = () => {
                 src={playIcon} 
                 alt="Play" 
                 style={{ 
-                  width: "16px", 
-                  height: "16px",
+                  width: "clamp(10px, 2vw, 18px)", 
+                  height: "clamp(10px, 2vw, 18px)",
                   filter: "brightness(0) saturate(100%) invert(35%) sepia(93%) saturate(1352%) hue-rotate(249deg) brightness(95%) contrast(85%)"
                 }} 
               />
@@ -116,8 +132,8 @@ const Testimonials = () => {
                     left: 0,
                     top: "50%",
                     transform: "translateY(-50%)",
-                  width: "10px",
-                  height: "10px",
+                  width: "clamp(6px, 1.2vw, 12px)",
+                  height: "clamp(6px, 1.2vw, 12px)",
                     borderRadius: "50%",
                     background: "#6A389F",
                     cursor: "pointer"
@@ -129,7 +145,7 @@ const Testimonials = () => {
             {/* Time Display */}
               <span
               style={{
-                fontSize: "12px",
+                fontSize: "clamp(9px, 1.4vw, 14px)",
                 color: "#8064A2",
                 fontWeight: 500,
                 flexShrink: 0
@@ -142,22 +158,22 @@ const Testimonials = () => {
             <div style={{ position: "relative", flexShrink: 0 }}>
               <div
                 style={{
-                  width: "48px",
-                  height: "48px",
+                  width: "clamp(34px, 6vw, 64px)",
+                  height: "clamp(34px, 6vw, 64px)",
                   borderRadius: "50%",
                   background: "#fff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: "0 0 0 3px #fff",
+                  boxShadow: "0 0 0 4px #fff",
                 }}
               >
                 <img 
                   src={profileImage} 
                   alt="Shubha Nagarajan" 
                   style={{ 
-                    width: "42px", 
-                    height: "42px",
+                    width: "clamp(30px, 5.4vw, 58px)", 
+                    height: "clamp(30px, 5.4vw, 58px)",
                     borderRadius: "50%",
                     objectFit: "cover"
                   }} 
@@ -170,23 +186,25 @@ const Testimonials = () => {
                   position: "absolute",
                   bottom: "-6px",
                   left: "-6px",
-                  width: "18px",
-                  height: "18px",
+                  width: "clamp(12px, 2vw, 20px)",
+                  height: "clamp(12px, 2vw, 20px)",
                   filter: "brightness(0) saturate(100%) invert(100%)",
                 }}
               />
             </div>
+
           </div>
 
+
           {/* User Profile */}
-          <div className="d-flex align-items-center" style={{ gap: "12px", flexShrink: 0 }}>
+          <div className="d-none d-md-flex align-items-center" style={{ gap: "12px", flexShrink: 0 }}>
             {/* Left profile image */}
             <img 
               src={profileImage} 
               alt="Profile" 
               style={{ 
-                width: "48px", 
-                height: "48px",
+                width: "clamp(36px, 7vw, 72px)", 
+                height: "clamp(36px, 7vw, 72px)",
                 borderRadius: "50%",
                 objectFit: "cover"
               }} 
@@ -196,8 +214,8 @@ const Testimonials = () => {
             <div>
               <h3
                 style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
+                  fontSize: "clamp(12px, 1.8vw, 25px)",
+                  fontWeight: "800",
                   color: "#6A389F",
                   margin: 0,
                   marginBottom: "4px"
@@ -207,7 +225,7 @@ const Testimonials = () => {
               </h3>
               <p
                 style={{
-                  fontSize: "12px",
+                  fontSize: "clamp(11px, 1.6vw, 14px)",
                   color: "#5C6F9F",
                   margin: 0
                 }}
